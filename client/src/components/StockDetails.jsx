@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function StockDetails({ isOpen, onClose, stock }) {
+function StockDetails({ isOpen, stock, isLoading, isError, onClose }) {
   const overlayRef = useRef();
 
   const handleClick = (e) => {
@@ -24,9 +24,15 @@ function StockDetails({ isOpen, onClose, stock }) {
     >
       <div className="card w-2xl bg-base-100 card-md shadow-sm border border-green-400">
         <div className="card-body">
-          {!stock ? (
-            <span class="loading loading-ring loading-xl text-neutral-800"></span>
-          ) : (
+          {isLoading && (
+            <span className="loading loading-ring loading-xl"></span>
+          )}
+
+          {isError && (
+            <p className="text-center text-red-500">Fehler beim Laden.</p>
+          )}
+
+          {!isLoading && !isError && stock && (
             <>
               {stock[0].image && (
                 <div className="bg-neutral-800 p-2 rounded">

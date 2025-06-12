@@ -4,34 +4,48 @@ import StockDetails from "../components/StockDetails";
 import { fetchCalendarData } from "../services/calendarService";
 import { fetchStockData } from "../services/stockService";
 import { useSortTableColumn } from "../hooks/useSortTableColumn";
+import { useQuery } from "@tanstack/react-query";
 
 function DividendCalendar() {
-  const [calendarData, setCalendarData] = useState([]);
   const [isCardOpen, setIsCardOpen] = useState(false);
-  const [selectedStock, setSelectedStock] = useState(null);
+  const [selectedSymbol, setSelectedSymbol] = useState(null);
+
   const { sortField, sortOrder, handleSort, getSortedData } =
     useSortTableColumn();
 
-  const loadData = async () => {
-    const all = await fetchCalendarData();
-    setCalendarData(all);
-  };
+  // ✅ Kalenderdaten via React Query
+  const {
+    data: calendarData = [],
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["calendar"],
+    queryFn: fetchCalendarData,
+  });
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  const handleViewDetails = async (symbol) => {
-    try {
-      const details = await fetchStockData(symbol);
-      setSelectedStock(details);
-      setIsCardOpen(true);
-    } catch (error) {
-      console.error("Fehler beim Laden der Stock-Details", error);
-    }
-  };
+  // ✅ Einzelne Aktie via React Query (Detail)
+  const {
+    data: selectedStock,
+    isLoading: isLoadingDetails,
+    isError: isErrorDetails,
+  } = useQuery({
+    queryKey: ["stock", selectedSymbol],
+    queryFn: () => fetchStockData(selectedSymbol),
+    enabled: !!selectedSymbol, //nur wenn Symbol gesetzt
+  });
 
   const sortedData = getSortedData(calendarData);
+
+  const handleViewDetails = (symbol) => {
+    setSelectedSymbol(symbol);
+    setIsCardOpen(true);
+  };
+
+  if (isLoading)
+    return <span className="loading loading-ring loading-xl"></span>;
+
+  if (isError)
+    return <p className="text-center text-red-500">Fehler beim Laden.</p>;
 
   return (
     <>
@@ -45,6 +59,8 @@ function DividendCalendar() {
       <StockDetails
         isOpen={isCardOpen}
         stock={selectedStock}
+        isLoading={isLoadingDetails}
+        isError={isErrorDetails}
         onClose={() => setIsCardOpen(false)}
       />
     </>

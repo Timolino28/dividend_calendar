@@ -1,10 +1,15 @@
 import "./App.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import DividendCalendar from "./pages/DividendCalendar";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <>
-      <DividendCalendar />
+      <QueryClientProvider client={queryClient}>
+        <DividendCalendar />
+      </QueryClientProvider>
     </>
   );
 }
