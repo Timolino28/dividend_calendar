@@ -2,3 +2,16 @@
 @plugin "daisyui" {
   themes: light --default;
 }
+
+.fancy-highlight::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120%;
+  height: 1.5em;
+  background-color: #05df72;
+  transform: skew(-12deg) translateY(-50%);
+  z-index: -1;
+  border-radius: 0.25rem;
+}
