@@ -21,6 +21,7 @@ function DividendCalendar() {
   } = useQuery({
     queryKey: ["calendar"],
     queryFn: fetchCalendarData,
+    staleTime: 1000 * 60 * 5, // 5 Minuten Cache
   });
 
   // ✅ Einzelne Aktie via React Query (Detail)
