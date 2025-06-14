@@ -1,8 +1,18 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 function NavBar() {
+  const location = useLocation();
+  const isLanding = location.pathname === "/";
+
   return (
-    <div className="navbar min-h-25 bg-neutral-800 border-b-2 border-solid border-bottom border-green-400">
+    <div
+      className={
+        isLanding
+          ? "navbar bg-neutral-800 "
+          : "navbar min-h-25 bg-neutral-800 border-b-2 border-solid border-bottom border-green-400"
+      }
+    >
       <div className="navbar-start">
         <a className="text-xl font-semibold text-green-400 ml-5" href="/">
           Zero Yield Club 💸
@@ -10,10 +20,18 @@ function NavBar() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-10">
-          <li className="text-xl font-semibold text-green-400">
+          <li
+            className={`${
+              isLanding ? "text-base" : "text-xl"
+            } font-semibold text-green-400`}
+          >
             <a href="/calendar">Dividend Calendar</a>
           </li>
-          <li className="text-xl font-semibold text-green-400">
+          <li
+            className={`${
+              isLanding ? "text-base" : "text-xl"
+            } font-semibold text-green-400`}
+          >
             <a>Valuation Check</a>
           </li>
         </ul>
