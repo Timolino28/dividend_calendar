@@ -62,6 +62,15 @@ function DividendCalendar() {
 
   return (
     <>
+      <div className="flex flex-col justify-center items-center my-10">
+        <h1 className="text-xl">
+          See the latest dividend payments from the Big Guns
+        </h1>
+        <p>
+          The "Yield" and "Payment Date" columns can be sorted
+          ascending/descending
+        </p>
+      </div>
       <Table
         data={sortedData}
         sortField={sortField}
