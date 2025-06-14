@@ -32,7 +32,7 @@ function NavBar() {
               isLanding ? "text-base" : "text-xl"
             } font-semibold text-green-400`}
           >
-            <a>Valuation Check</a>
+            <a href="/valuation-check">Valuation Check</a>
           </li>
         </ul>
       </div>

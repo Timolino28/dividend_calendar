@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import NavBar from "./components/NavBar";
 import LandingPage from "./pages/LandingPage";
 import DividendCalendar from "./pages/DividendCalendar";
+import ValuationCheckPage from "./pages/ValuationCheckPage";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/calendar" element={<DividendCalendar />} />
+          <Route path="/valuation-check" element={<ValuationCheckPage />} />
         </Routes>
       </QueryClientProvider>
     </>
