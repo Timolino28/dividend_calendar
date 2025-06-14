@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function StockDetails({ isOpen, stock, isLoading, isError, onClose }) {
+function StockDetails({ isOpen, stock, dcf, isLoading, isError, onClose }) {
   const overlayRef = useRef();
 
   const handleClick = (e) => {
@@ -52,6 +52,16 @@ function StockDetails({ isOpen, stock, isLoading, isError, onClose }) {
                   <h1 className="font-bold text-green-400">Current Price</h1>
                   <p className="text-neutral-800">
                     ${stock[0].price.toFixed(2)}
+                  </p>
+                </div>
+                <div>
+                  <h1 className="font-bold text-green-400">
+                    Current DCF-Value
+                  </h1>
+                  <p className="text-neutral-800">
+                    {dcf && dcf[0]?.dcf !== undefined
+                      ? `$${dcf[0].dcf.toFixed(2)}`
+                      : "No data available"}
                   </p>
                 </div>
                 <div>

@@ -3,6 +3,7 @@ import Table from "../components/Table";
 import StockDetails from "../components/StockDetails";
 import { fetchCalendarData } from "../services/calendarService";
 import { fetchStockData } from "../services/stockService";
+import { fetchDCFData } from "../services/dcfService";
 import { useSortTableColumn } from "../hooks/useSortTableColumn";
 import { useQuery } from "@tanstack/react-query";
 
@@ -35,6 +36,17 @@ function DividendCalendar() {
     enabled: !!selectedSymbol, //nur wenn Symbol gesetzt
   });
 
+  // ✅ Einzelner DCF-Wert pro Aktie via React Query (Detail)
+  const {
+    data: selectedDCF,
+    isLoading: isLoadingDCF,
+    isError: isErrorDCF,
+  } = useQuery({
+    queryKey: ["dcf", selectedSymbol],
+    queryFn: () => fetchDCFData(selectedSymbol),
+    enabled: !!selectedSymbol, //nur wenn Symbol gesetzt
+  });
+
   const sortedData = getSortedData(calendarData);
 
   const handleViewDetails = (symbol) => {
@@ -60,8 +72,9 @@ function DividendCalendar() {
       <StockDetails
         isOpen={isCardOpen}
         stock={selectedStock}
-        isLoading={isLoadingDetails}
-        isError={isErrorDetails}
+        dcf={selectedDCF}
+        isLoading={(isLoadingDetails, isLoadingDCF)}
+        isError={(isErrorDetails, isErrorDCF)}
         onClose={() => setIsCardOpen(false)}
       />
     </>
