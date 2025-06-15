@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import MetricCard from "../components/MetricCard";
+import { fetchValuationData } from "../services/valuationService";
+import { useQuery } from "@tanstack/react-query";
+import SearchBar from "../components/SearchBar";
 
 function ValuationCheckPage() {
+  const [inputValue, setInputValue] = useState("");
+  const [symbol, setSymbol] = useState(null);
+
+  const handleSubmit = () => {
+    setSymbol(inputValue);
+    console.log(symbol);
+  };
+
+  const { data, isLoading, isError } = useQuery({
+    querKey: ["valuation", symbol],
+    queryFn: () => fetchValuationData(symbol),
+    enabled: !!symbol, //erst ausführen, wenn Symbol gesetzt ist
+  });
+
   return (
     <>
       <div className="flex flex-col justify-center items-center my-10 max-w-3xl mx-auto px-4">
@@ -14,9 +31,16 @@ function ValuationCheckPage() {
           you can see if there are signs of undervaluation and therefore
           investment opportunity.
         </p>
+        <div className="mt-5">
+          <SearchBar
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onSubmit={handleSubmit}
+          />
+        </div>
       </div>
       <div className="flex justify-center mt-6">
-        <MetricCard />
+        <MetricCard data={data} isLoading={isLoading} isError={isError} />
       </div>
     </>
   );
