@@ -11,12 +11,12 @@ app.use(cors());
 //Routen importieren
 const calendarRoute = require("./routes/calendarRoute");
 const stockRoute = require("./routes/stockRoute");
-const dcfRoute = require("./routes/dcfRoute");
+const valuationRoute = require("./routes/valuationRoute");
 
 //Routen registrieren
 app.use("/api/calendar", calendarRoute);
 app.use("/api/stock", stockRoute);
-app.use("/api/dcf", dcfRoute);
+app.use("/api/valuation", valuationRoute);
 
 app.listen(PORT, () => {
   console.log(`Server läuft auf PORT: ${PORT}`);
