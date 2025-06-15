@@ -44,6 +44,8 @@ function ValuationCheckPage() {
         <h1 className="my-5 text-2xl font-semibold text-green-400">
           Hier kommt nocht der Name der Company
         </h1>
+        {/*Hier noch einen Block einfügen, in dem das Datum der Daten sowie das Jahr der Daten angezeigt werden*/}
+        {/*Im Free Plan sind die Daten immer für das Full Year (FY), nach Quartalen zu filtern, geht nur im Premium-Plan*/}
         <MetricCard data={data} isLoading={isLoading} isError={isError} />
       </div>
     </>
