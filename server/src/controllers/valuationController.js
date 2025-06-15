@@ -4,7 +4,7 @@ require("dotenv").config();
 exports.getValuationData = async (req, res) => {
   try {
     const apiKey = process.env.API_KEY;
-    const symbol = req.query.symbol || "NVDA";
+    const symbol = req.query.symbol || "AAPL";
 
     //URLs vorbereiten
     const dcfURL = `https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=${symbol}&apikey=${apiKey}`;
@@ -26,6 +26,9 @@ exports.getValuationData = async (req, res) => {
     //Response zusammenbauen
     const result = {
       stockPrice: dcfData[0]["Stock Price"],
+      date: financialRatioData[0].date,
+      year: financialRatioData[0].fiscalYear,
+      period: financialRatioData[0].period,
       dcf: dcfData[0].dcf.toFixed(2),
       priceToEarningsRatio:
         financialRatioData[0].priceToEarningsRatio.toFixed(2),
