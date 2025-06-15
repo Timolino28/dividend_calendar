@@ -2,77 +2,38 @@ import React from "react";
 
 function MetricCard() {
   return (
-    <div class="stats shadow">
-      <div class="stat">
-        <div class="stat-figure badge badge-soft badge-success">Success</div>
-        <div class="stat-title">Current Stock Price</div>
-        <div class="stat-value">31K</div>
+    <div class="stats shadow-md shadow-green-400 bg-neutral-800">
+      <div class="stat border-r border-green-400">
+        <div class="stat-title text-neutral-300">Current Stock Price</div>
+        <div class="stat-value text-white">31K</div>
       </div>
 
       <div class="stat">
         <div class="stat-figure badge badge-soft badge-error">Error</div>
-        <div class="stat-title">Current DCF-Value</div>
-        <div class="stat-value">4,200</div>
+        <div class="stat-title text-neutral-300">Current DCF-Value</div>
+        <div class="stat-value text-white">4,200</div>
       </div>
 
       <div class="stat">
-        <div class="stat-figure text-secondary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="inline-block h-8 w-8 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-            ></path>
-          </svg>
+        <div class="stat-figure badge badge-soft badge-success ">Success</div>
+        <div class="stat-title text-neutral-300">
+          Price-to-Earnings Ratio (P/E)
         </div>
-        <div class="stat-title">Price-to-Earnings Ratio (P/E)</div>
-        <div class="stat-value">1,200</div>
+        <div class="stat-value text-white">1,200</div>
       </div>
 
       <div class="stat">
-        <div class="stat-figure text-secondary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="inline-block h-8 w-8 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-            ></path>
-          </svg>
-        </div>
-        <div class="stat-title">Price-to-Book Ratio (P/B)</div>
-        <div class="stat-value">1,200</div>
+        <div class="stat-figure badge badge-soft badge-warning">Warning</div>
+        <div class="stat-title text-neutral-300">Price-to-Book Ratio (P/B)</div>
+        <div class="stat-value text-white">1,200</div>
       </div>
 
       <div class="stat">
-        <div class="stat-figure text-secondary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="inline-block h-8 w-8 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-            ></path>
-          </svg>
+        <div class="stat-figure badge badge-soft badge-warning">Warning</div>
+        <div class="stat-title text-neutral-300">
+          Debt-to-Equity Ratio (D/E)
         </div>
-        <div class="stat-title">Debt-to-Equity Ratio (D/E)</div>
-        <div class="stat-value">1,200</div>
+        <div class="stat-value text-white">1,200</div>
       </div>
     </div>
   );
