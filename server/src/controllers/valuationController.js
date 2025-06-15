@@ -26,10 +26,11 @@ exports.getValuationData = async (req, res) => {
     //Response zusammenbauen
     const result = {
       stockPrice: dcfData[0]["Stock Price"],
-      dcf: dcfData[0].dcf,
-      priceToEarningsRatio: financialRatioData[0].priceToEarningsRatio,
-      priceToBookRatio: financialRatioData[0].priceToBookRatio,
-      debtToEquityRatio: financialRatioData[0].debtToEquityRatio,
+      dcf: dcfData[0].dcf.toFixed(2),
+      priceToEarningsRatio:
+        financialRatioData[0].priceToEarningsRatio.toFixed(2),
+      priceToBookRatio: financialRatioData[0].priceToBookRatio.toFixed(2),
+      debtToEquityRatio: financialRatioData[0].debtToEquityRatio.toFixed(2),
     };
 
     res.json(result);
