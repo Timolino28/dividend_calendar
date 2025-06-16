@@ -49,7 +49,11 @@ function ValuationCheckPage() {
             <p className="text-[18px] font-semibold">{`Date of data: ${
               data?.date ?? ""
             }`}</p>
-            <p className="mb-5">{`Period: ${data?.period ?? ""}`}</p>
+            <p className="mb-5">
+              {data?.period === "FY"
+                ? "Period: Full Year"
+                : `Period: ${data?.period ?? ""}`}
+            </p>
           </>
         )}
 
