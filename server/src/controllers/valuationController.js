@@ -7,24 +7,28 @@ exports.getValuationData = async (req, res) => {
     const symbol = req.query.symbol || "AAPL";
 
     //URLs vorbereiten
+    const nameURL = `https://financialmodelingprep.com/stable/search-symbol?query=${symbol}&apikey=${apiKey}`;
     const dcfURL = `https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=${symbol}&apikey=${apiKey}`;
     const financialRatiosURL = `https://financialmodelingprep.com/stable/ratios?symbol=${symbol}&apikey=${apiKey}`;
 
     // Beide API-Calls parallel ausführen
-    const [dcfRes, financialRatioRes] = await Promise.all([
+    const [nameRes, dcfRes, financialRatioRes] = await Promise.all([
+      axios.get(nameURL),
       axios.get(dcfURL),
       axios.get(financialRatiosURL),
     ]);
 
+    const nameData = nameRes.data;
     const dcfData = dcfRes.data;
     const financialRatioData = financialRatioRes.data;
 
-    if (!dcfData || !financialRatioData) {
+    if (!nameData || !dcfData || !financialRatioData) {
       return res.status(500).json({ error: "Ungültige Daten von der API" });
     }
 
     //Response zusammenbauen
     const result = {
+      companyName: nameData[0].name,
       stockPrice: dcfData[0]["Stock Price"],
       date: financialRatioData[0].date,
       year: financialRatioData[0].fiscalYear,
