@@ -41,7 +41,7 @@ function ValuationCheckPage() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-6">
-        <h1 className="my-5 text-2xl font-semibold text-green-400">
+        <h1 className="my-5 text-6xl font-semibold text-green-400">
           {data?.companyName ?? ""}
         </h1>
         {data && (
