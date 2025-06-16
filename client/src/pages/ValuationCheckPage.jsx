@@ -44,10 +44,15 @@ function ValuationCheckPage() {
         <h1 className="my-5 text-2xl font-semibold text-green-400">
           {data?.companyName ?? ""}
         </h1>
-        <p className="text-[18px] font-semibold">{`Date of data: ${
-          data?.date ?? ""
-        }`}</p>
-        <p className="mb-5">{`Period: ${data?.period ?? ""}`}</p>
+        {data && (
+          <>
+            <p className="text-[18px] font-semibold">{`Date of data: ${
+              data?.date ?? ""
+            }`}</p>
+            <p className="mb-5">{`Period: ${data?.period ?? ""}`}</p>
+          </>
+        )}
+
         <MetricCard data={data} isLoading={isLoading} isError={isError} />
       </div>
     </>
