@@ -63,10 +63,10 @@ function DividendCalendar() {
   return (
     <>
       <div className="flex flex-col justify-center items-center my-10">
-        <h1 className="text-xl">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-neutral-800 tracking-tight">
           See the latest dividend payments from the Big Guns
         </h1>
-        <p>
+        <p className="mt-4 text-base sm:text-lg text-neutral-500 leading-relaxed">
           The "Yield" and "Payment Date" columns can be sorted
           ascending/descending
         </p>
