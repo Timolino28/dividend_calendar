@@ -67,7 +67,7 @@ function StockDetails({
                   </h1>
                   <p className="text-neutral-800">
                     {valuation && valuation?.dcf !== undefined
-                      ? `$${valuation.dcf.toFixed(2)}`
+                      ? `$${valuation.dcf}`
                       : "No data available"}
                   </p>
                 </div>
