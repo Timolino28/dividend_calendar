@@ -50,7 +50,7 @@ function MetricCard({ data, isLoading, isError }) {
         <div class="stat border-r border-green-400">
           <div class="stat-title text-neutral-300">Current Stock Price</div>
           <div class="stat-value text-white">
-            {data.stockPrice != null ? data.stockPrice : "N/A"}
+            {data.stockPrice != null ? data.stockPrice.toFixed(2) : "N/A"}
           </div>
         </div>
 
