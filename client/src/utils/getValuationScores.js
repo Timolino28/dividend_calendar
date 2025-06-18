@@ -12,7 +12,7 @@ export function getPEScore(pe) {
 
   if (pe < 15) return "undervalued";
   if (pe > 25) return "overvalued";
-  return "null";
+  return "neutral";
 }
 
 export function getPBScore(pb) {
