@@ -12,7 +12,7 @@ function Table({ data, sortField, sortOrder, onSort, onViewDetails }) {
   return (
     <div className="my-5 overflow-x-auto max-w-6xl mx-auto rounded-box border bg-neutral-800">
       <table className="table">
-        <thead className="text-green-400">
+        <thead className="text-xl text-green-400">
           <tr>
             <th>#</th>
             <th>Symbol</th>
@@ -40,7 +40,7 @@ function Table({ data, sortField, sortOrder, onSort, onViewDetails }) {
             </th>
           </tr>
         </thead>
-        <tbody className="text-white">
+        <tbody className="text-[16px] text-white">
           {data.map((data, index) => (
             <tr key={data.symbol}>
               <th>{index + 1}</th>
