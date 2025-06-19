@@ -25,7 +25,7 @@ function Features() {
           </div>
           <div className="bg-green-400 border-2 border-green-200 py-5 px-4 rounded-md">
             <h2 className="text-xl uppercase text-green-800 font-bold mb-5">
-              Stock Valuation
+              Valuation Check
             </h2>
             <p className="text-white text-md">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
