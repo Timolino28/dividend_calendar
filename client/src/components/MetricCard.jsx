@@ -48,17 +48,15 @@ function MetricCard({ data, isLoading, isError }) {
   return (
     <>
       <div class="stats shadow-md shadow-green-400 bg-neutral-800 overflow-visible">
-        <div class="stat border-r border-green-400">
+        <div class="stat min-w-55 flex flex-col">
           <div class="stat-title text-neutral-300">Current Stock Price</div>
           <div class="stat-value text-white">
             {data.stockPrice != null ? data.stockPrice.toFixed(2) : "N/A"}
           </div>
         </div>
 
-        <div class="stat">
-          <div class="stat-figure">
-            {renderBadge(getDCFScore(data?.dcf, data?.stockPrice))}
-          </div>
+        {/*DCF-Container*/}
+        <div class="stat min-w-55 flex flex-col">
           <div class="stat-title text-neutral-300">
             {" "}
             <div
@@ -72,12 +70,13 @@ function MetricCard({ data, isLoading, isError }) {
           <div class="stat-value text-white">
             {data.dcf != null ? data.dcf : "N/A"}
           </div>
+          <div class="stat-figure mt-2 self-start">
+            {renderBadge(getDCFScore(data?.dcf, data?.stockPrice))}
+          </div>
         </div>
 
-        <div class="stat">
-          <div class="stat-figure">
-            {renderBadge(getPEScore(data?.priceToEarningsRatio))}
-          </div>
+        {/*Price-to-Earnings-Container*/}
+        <div class="stat min-w-55 flex flex-col">
           <div class="stat-title text-neutral-300">
             <div
               className="tooltip tooltip-success flex"
@@ -93,12 +92,13 @@ function MetricCard({ data, isLoading, isError }) {
               ? data.priceToEarningsRatio
               : "N/A"}
           </div>
+          <div class="stat-figure mt-2 self-start">
+            {renderBadge(getPEScore(data?.priceToEarningsRatio))}
+          </div>
         </div>
 
-        <div class="stat">
-          <div class="stat-figure">
-            {renderBadge(getPBScore(data?.priceToBookRatio))}
-          </div>
+        {/*Price-to-Book-Container*/}
+        <div class="stat min-w-55 flex flex-col">
           <div class="stat-title text-neutral-300">
             <div
               className="tooltip tooltip-success flex"
@@ -112,12 +112,13 @@ function MetricCard({ data, isLoading, isError }) {
           <div class="stat-value text-white">
             {data.priceToBookRatio != null ? data.priceToBookRatio : "N/A"}
           </div>
+          <div class="stat-figure mt-2 self-start">
+            {renderBadge(getPBScore(data?.priceToBookRatio))}
+          </div>
         </div>
 
-        <div class="stat">
-          <div class="stat-figure">
-            {renderBadge(getDEScore(data?.debtToEquityRatio))}
-          </div>
+        {/*Debt-to-Equity-Container*/}
+        <div class="stat min-w-55 flex flex-col">
           <div class="stat-title text-neutral-300">
             <div
               className="tooltip tooltip-success flex"
@@ -130,6 +131,9 @@ function MetricCard({ data, isLoading, isError }) {
           </div>
           <div class="stat-value text-white">
             {data.debtToEquityRatio != null ? data.debtToEquityRatio : "N/A"}
+          </div>
+          <div class="stat-figure mt-2 self-start">
+            {renderBadge(getDEScore(data?.debtToEquityRatio))}
           </div>
         </div>
       </div>
