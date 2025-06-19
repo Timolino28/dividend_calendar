@@ -24,7 +24,11 @@ function MetricCard({ data, isLoading, isError }) {
   }
 
   if (isError) {
-    return <div>Something went wrong...</div>;
+    return (
+      <div className="text-xl font-semibold text-red-400">
+        No valid stock symbol - please try again
+      </div>
+    );
   }
 
   if (!data) {
