@@ -11,7 +11,7 @@ const painPoints = [
 
 function PainSection() {
   return (
-    <div className="bg-neutral-800 pt-10">
+    <div className="bg-neutral-800 py-20">
       <div className="max-w-5xl mx-auto flex items-center py-10 px-8">
         <h1 className="text-3xl/10 font-medium text-white">
           We know the{" "}
@@ -29,7 +29,7 @@ function PainSection() {
               <ul className="p-4">
                 <li className="text-red-400 flex items-center uppercase">
                   {" "}
-                  <IoMdCloseCircle className="mr-2" />
+                  <IoMdCloseCircle className="mr-2 text-lg shrink-0" />
                   {points}
                 </li>
               </ul>

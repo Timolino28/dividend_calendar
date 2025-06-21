@@ -1,10 +1,29 @@
 import React from "react";
+import { FaCheckCircle } from "react-icons/fa";
+
+const dividendCalendar = [
+  "View upcoming dividend payments at a glance",
+  "Includes key dates: Ex-Date, Payment Date, and Dividend Yield",
+  "Perfect for income-focused investors and dividend strategies",
+  "Helps you plan buy-ins around dividend timelines",
+  "Powered by real-time data updates",
+];
+
+const valuationFeatures = [
+  "Analyze stocks using a Value Investing approach",
+  "Core metric: Discounted Cash Flow (DCF) valuation",
+  "Supported by key financial ratios:",
+  "Price-to-Earnings Ratio (P/E)",
+  "Price-to-Book Ratio (P/B)",
+  "Debt-to-Equity Ratio (D/E)",
+  "Instantly see if a stock is undervalued, overvalued, or fairly valued",
+];
 
 function Features() {
   return (
-    <div className="bg-neutral-800 pt-10">
+    <div className="bg-neutral-800 py-10">
       <div className="max-w-5xl mx-auto py-10 px-8">
-        <h1 className="text-4xl font-bold text-white text-center">
+        <h1 className="text-5xl font-bold text-white text-center">
           Welcome to the{" "}
           <span className="text-green-400">Zero Yield Club!</span>
         </h1>
@@ -12,27 +31,46 @@ function Features() {
           May we introduce you the solution with our two grandiose features
         </p>
         <div className="flex gap-10">
-          <div className="bg-green-400 border-2 border-green-200 py-5 px-4 rounded-md">
+          {/* Dividend Calendar */}
+          <div className="bg-green-300 border-2 border-green-200 py-5 px-6 rounded-md flex-1 flex flex-col min-h-[350px]">
             <h2 className="text-xl uppercase text-green-800 font-bold mb-5">
-              Dividend Calendar
+              🗓 Dividend Calendar
             </h2>
-            <p className="text-neutral-800 text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              quis voluptates autem illo repellat cum eius voluptas ab quia,
-              ullam, corrupti quam ipsa. Architecto mollitia, sit rem debitis
-              quaerat dolores facilis? Ad impedit possimus placeat?
-            </p>
+            <ul className="space-y-3">
+              {dividendCalendar.map((feature, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-2 text-green-900 py-1"
+                >
+                  <FaCheckCircle className="mt-1 text-green-700 text-lg shrink-0" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="bg-green-400 border-2 border-green-200 py-5 px-4 rounded-md">
+
+          {/* Valuation Check */}
+          <div className="bg-green-300 border-2 border-green-200 py-5 px-6 rounded-md flex-1 flex flex-col min-h-[350px]">
             <h2 className="text-xl uppercase text-green-800 font-bold mb-5">
-              Valuation Check
+              📊 Valuation Check
             </h2>
-            <p className="text-white text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-              animi, quaerat excepturi officiis amet magni adipisci, unde sunt
-              molestias vel non natus ab maiores porro. Nesciunt corporis sequi
-              non voluptates iure, culpa sit alias blanditiis.
-            </p>
+            <ul className="space-y-3">
+              {valuationFeatures.map((feature, index) => (
+                <li
+                  key={index}
+                  className={`flex items-start gap-2 text-green-900 py-1 ${
+                    feature.includes("P/E") ||
+                    feature.includes("P/B") ||
+                    feature.includes("D/E")
+                      ? "pl-6"
+                      : ""
+                  }`}
+                >
+                  <FaCheckCircle className="mt-1 text-green-700 text-lg shrink-0" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
