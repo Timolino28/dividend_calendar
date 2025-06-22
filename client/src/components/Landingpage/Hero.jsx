@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Hero() {
   return (
-    <div className=" bg-neutral-800 ">
+    <div className="bg-neutral-800 min-h-200">
       <div className="hero-content mx-auto py-5 text-center">
         <div className="max-w-xl mt-10">
           <h1 className="text-4xl text-green-400 font-black font-roboto">
@@ -36,7 +36,7 @@ function Hero() {
             Save prospect stocks, track their performance and build the
             foundation for one monkey-mad portfolio
           </p>
-          <button className="btn text-neutral-800 bg-green-400 border border-green-400 text-xl py-6 px-8">
+          <button className="btn text-neutral-800 bg-green-400 border border-green-400 text-[16px] py-6 px-8">
             Let's Start
             <FaArrowRight />
           </button>

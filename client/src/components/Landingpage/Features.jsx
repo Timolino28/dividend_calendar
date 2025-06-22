@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const dividendCalendar = [
   "View upcoming dividend payments at a glance",
@@ -21,28 +21,31 @@ const valuationFeatures = [
 
 function Features() {
   return (
-    <div className="bg-neutral-800 py-10">
-      <div className="max-w-5xl mx-auto py-10 px-8">
-        <h1 className="text-5xl font-bold text-white text-center">
+    <div className="bg-neutral-100 py-10">
+      <div className="flex flex-col items-center max-w-5xl mx-auto py-10 px-8">
+        <div className="badge badge-soft bg-green-100 text-green-400 font-semibold border-green-400 mb-3">
+          Our Solution
+        </div>
+        <h1 className="text-5xl font-bold text-neutral-800 text-center">
           Welcome to the{" "}
           <span className="text-green-400">Zero Yield Club!</span>
         </h1>
-        <p className="text-white text-2xl text-center mt-3 mb-10">
+        <p className="text-neutral-600 text-2xl text-center mt-3 mb-10">
           May we introduce you the solution with our two grandiose features
         </p>
         <div className="flex gap-10">
           {/* Dividend Calendar */}
-          <div className="bg-green-300 border-2 border-green-200 py-5 px-6 rounded-md flex-1 flex flex-col min-h-[350px]">
-            <h2 className="text-xl uppercase text-green-800 font-bold mb-5">
-              🗓 Dividend Calendar
+          <div className="bg-neutral-800 border-1 border-green-400 py-5 px-6 rounded-md flex-1 flex flex-col min-h-[350px] shadow-sm shadow-green-400">
+            <h2 className="text-xl uppercase text-white font-bold mb-5">
+              Dividend Calendar
             </h2>
             <ul className="space-y-3">
               {dividendCalendar.map((feature, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-2 text-green-900 py-1"
+                  className="flex items-start gap-2 text-green-400 py-1"
                 >
-                  <FaCheckCircle className="mt-1 text-green-700 text-lg shrink-0" />
+                  <FaRegCheckCircle className="mt-1 text-green-400 text-lg shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}
@@ -50,15 +53,15 @@ function Features() {
           </div>
 
           {/* Valuation Check */}
-          <div className="bg-green-300 border-2 border-green-200 py-5 px-6 rounded-md flex-1 flex flex-col min-h-[350px]">
-            <h2 className="text-xl uppercase text-green-800 font-bold mb-5">
-              📊 Valuation Check
+          <div className="bg-neutral-800 border-1 border-green-400 py-5 px-6 rounded-md flex-1 flex flex-col min-h-[350px] shadow-sm shadow-green-400">
+            <h2 className="text-xl uppercase text-white font-bold mb-5">
+              Valuation Check
             </h2>
             <ul className="space-y-3">
               {valuationFeatures.map((feature, index) => (
                 <li
                   key={index}
-                  className={`flex items-start gap-2 text-green-900 py-1 ${
+                  className={`flex items-start gap-2 text-green-400 py-1 ${
                     feature.includes("P/E") ||
                     feature.includes("P/B") ||
                     feature.includes("D/E")
@@ -66,7 +69,7 @@ function Features() {
                       : ""
                   }`}
                 >
-                  <FaCheckCircle className="mt-1 text-green-700 text-lg shrink-0" />
+                  <FaRegCheckCircle className="mt-1 text-green-400 text-lg shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}
