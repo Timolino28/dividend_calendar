@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegNewspaper, FaYoutube, FaChartBar, FaRobot } from "react-icons/fa";
+import { GiBackPain } from "react-icons/gi";
 
 const painPoints = [
   {
@@ -30,9 +31,9 @@ const painPoints = [
 
 function PainSection() {
   return (
-    <div className="bg-neutral-800 py-20">
-      <div className="max-w-5xl flex">
-        <div className="mx-auto items-center py-10 px-8">
+    <div className="bg-neutral-800 pb-20">
+      <div className="max-w-5xl flex items-center mx-auto gap-25">
+        <div className="px-8 py-10">
           <h1 className="text-4xl/10 font-medium text-white">
             We know the{" "}
             <span className="uppercase italic underline font-bold text-red-400">
@@ -65,7 +66,9 @@ function PainSection() {
             </div>
           </div>
         </div>
-        <div className="max-w-2xl flex items-center justify-center py-10 px-8 bg-green-400 rounded-md"></div>
+        <div className="flex items-center justify-center py-10 text-red-400 rounded-md">
+          <GiBackPain size={300} />
+        </div>
       </div>
     </div>
   );
