@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import StockDescription from "./StockDescription";
 
 function StockDetails({
   isOpen,
@@ -53,7 +54,7 @@ function StockDetails({
               <h2 className="card-title text-green-400 mt-5">
                 {stock[0].companyName}
               </h2>
-              <p className="text-neutral-800">{stock[0].description}</p>
+              <StockDescription description={stock[0].description} />
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <div>
                   <h1 className="font-bold text-green-400">Current Price</h1>
