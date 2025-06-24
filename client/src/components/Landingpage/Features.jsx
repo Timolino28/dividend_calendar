@@ -31,7 +31,7 @@ function Features() {
           <span className="text-green-400">Zero Yield Club!</span>
         </h1>
         <p className="text-neutral-600 text-2xl text-center mt-3 mb-10">
-          May we introduce you the solution with our two grandiose features
+          Two features. Zero fluff.{" "}
         </p>
         <div className="flex gap-10">
           {/* Dividend Calendar */}
