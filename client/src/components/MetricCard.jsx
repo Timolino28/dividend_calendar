@@ -9,11 +9,15 @@ import { getOverallValuationScore } from "../utils/getOverallValuationScore";
 import UndervaluedBadge from "../components/UndervaluedBadge";
 import OvervaluedBadge from "../components/OvervaluedBadge";
 import NeutralBadge from "../components/NeutralBadge";
+import LowLeverage from "../components/LowLeverageBadge";
+import HighLeverage from "../components/HighLeverageBadge";
 import { MdInfoOutline } from "react-icons/md";
 
 function renderBadge(score) {
   if (score === "undervalued") return <UndervaluedBadge />;
+  if (score === "low leverage") return <LowLeverage />;
   if (score === "overvalued") return <OvervaluedBadge />;
+  if (score === "high leverage") return <HighLeverage />;
   if (score === "neutral") return <NeutralBadge />;
   return null;
 }
@@ -55,7 +59,7 @@ function MetricCard({ data, isLoading, isError }) {
         <div class="stat min-w-55 flex flex-col">
           <div class="stat-title text-neutral-300">Current Stock Price</div>
           <div class="stat-value text-white">
-            {data.stockPrice != null ? data.stockPrice.toFixed(2) : "N/A"}
+            ${data.stockPrice != null ? data.stockPrice.toFixed(2) : "N/A"}
           </div>
         </div>
 
@@ -72,7 +76,7 @@ function MetricCard({ data, isLoading, isError }) {
             </div>
           </div>
           <div class="stat-value text-white">
-            {data.dcf != null ? data.dcf : "N/A"}
+            ${data.dcf != null ? data.dcf : "N/A"}
           </div>
           <div class="stat-figure mt-2 self-start">
             {renderBadge(getDCFScore(data?.dcf, data?.stockPrice))}

@@ -26,7 +26,7 @@ export function getPBScore(pb) {
 export function getDEScore(de) {
   if (de == null) return null;
 
-  if (de < 0.5) return "undervalued";
-  if (de > 2.0) return "overvalued";
+  if (de < 0.5) return "low leverage";
+  if (de > 2.0) return "high leverage";
   return "neutral";
 }
