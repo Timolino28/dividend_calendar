@@ -55,10 +55,20 @@ function DividendCalendar() {
   };
 
   if (isLoading)
-    return <span className="loading loading-ring loading-xl"></span>;
+    return (
+      <>
+        <div className="flex justify-center p-10">
+          <span className="text-center loading loading-ring loading-xl"></span>
+        </div>
+      </>
+    );
 
   if (isError)
-    return <p className="text-center text-red-500">Fehler beim Laden.</p>;
+    return (
+      <div className="flex justify-center p-10 text-xl font-semibold text-red-400">
+        Oops, something went wrong...
+      </div>
+    );
 
   return (
     <>
