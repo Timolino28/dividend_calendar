@@ -9,12 +9,12 @@ function NavBar() {
     <div
       className={
         isLanding
-          ? "navbar bg-neutral-800 "
-          : "navbar min-h-25 bg-neutral-800 border-b-2 border-solid border-bottom border-green-400"
+          ? "navbar bg-neutral-900 border-b-1 border-neutral-100"
+          : "navbar min-h-25 bg-neutral-900 border-b-2 border-green-400"
       }
     >
       <div className="navbar-start">
-        <a className="text-xl font-semibold text-green-400 ml-5" href="/">
+        <a className="text-xl font-semibold text-neutral-100 ml-5" href="/">
           Zero Yield Club 💸
         </a>
       </div>
@@ -23,14 +23,14 @@ function NavBar() {
           <li
             className={`${
               isLanding ? "text-base" : "text-xl"
-            } font-semibold text-green-400`}
+            } font-semibold text-neutral-100`}
           >
             <a href="/calendar">Dividend Calendar</a>
           </li>
           <li
             className={`${
               isLanding ? "text-base" : "text-xl"
-            } font-semibold text-green-400`}
+            } font-semibold text-neutral-100`}
           >
             <a href="/valuation-check">Valuation Check</a>
           </li>

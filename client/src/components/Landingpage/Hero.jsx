@@ -5,11 +5,11 @@ function Hero() {
   return (
     <div className="bg-neutral-800 min-h-200">
       <div className="hero-content mx-auto py-5 text-center">
-        <div className="max-w-xl mt-10">
-          <h1 className="text-4xl text-green-400 font-black font-roboto">
-            The Hunting List for future{" "}
+        <div className="max-w-2xl mt-12">
+          <h1 className="text-5xl text-green-400 font-black font-roboto">
+            Finding & evaluating <br /> stocks in <br />
             <span className="mt-3 uppercase italic tracking-wide leading-[1.5] text-5xl text-neutral-800 relative inline-block fancy-highlight">
-              Millionaires!
+              Easy Mode
             </span>
           </h1>
           <div
@@ -32,9 +32,12 @@ function Hero() {
             async
             src="https://tenor.com/embed.js"
           ></script>
-          <p className="text-neutral-200 text-xl font-semibold py-4 mb-5">
-            Save prospect stocks, track their performance and build the
-            foundation for one monkey-mad portfolio
+          <p className="text-neutral-200 text-xl py-4 mb-5">
+            Track payout dates with our{" "}
+            <span className="font-semibold">Dividend Calendar</span> and
+            evaluate fair prices with our{" "}
+            <span className="font-semibold">Valuation Scoring System</span>.
+            Data-driven, not drama-driven.
           </p>
           <button className="btn text-neutral-800 bg-green-400 border border-green-400 text-[16px] py-6 px-8">
             Let's Start
