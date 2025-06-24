@@ -25,7 +25,7 @@ const painPoints = [
 
 function PainSection() {
   return (
-    <div className="bg-neutral-800 pb-20">
+    <div className="bg-neutral-900 py-20">
       <div className="max-w-5xl flex items-center mx-auto gap-25">
         <div className="px-8 py-10">
           <h1 className="text-4xl/10 font-semibold text-red-400 mb-2">
@@ -35,9 +35,9 @@ function PainSection() {
             But between gurus, graphs, and guesswork — it kinda does.
           </h2>
           <div>
-            <div className="flex flex-col gap-8 min-w-sm py-2 bg-neutral-800 ">
+            <div className="flex flex-col gap-8 min-w-sm py-2 bg-neutral-900 ">
               {painPoints.map((points) => (
-                <div className="card bg-neutral-700 w-110 text-neutral-content border-1 border-neutral-500">
+                <div className="card bg-neutral-800 w-110 text-neutral-content border-1 border-neutral-500">
                   <div className="card-body">
                     <div className="flex">
                       <div className="mr-4 text-neutral-300">{points.icon}</div>

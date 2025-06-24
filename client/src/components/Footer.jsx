@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-neutral-900 border-t-1 border-neutral-100 text-neutral-content p-6">
+    <footer className="footer sm:footer-horizontal bg-neutral-900 border-t-[0.5px] border-green-400 text-neutral-content p-6">
       <aside className="grid-flow-col items-center">
         <p className="font-semibold">Built by 28 Innovation Lab</p>
       </aside>

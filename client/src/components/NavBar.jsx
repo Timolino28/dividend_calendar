@@ -9,7 +9,7 @@ function NavBar() {
     <div
       className={
         isLanding
-          ? "navbar bg-neutral-900 border-b-1 border-green-400"
+          ? "navbar bg-neutral-900 border-b-[0.5px] border-green-400"
           : "navbar min-h-25 bg-neutral-900 border-b-2 border-green-400"
       }
     >
