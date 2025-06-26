@@ -20,7 +20,7 @@ function CTA() {
             </span>
             <div className="flex justify-between">
               <h2 className="text-3xl text-neutral-100 font-bold">Starter</h2>
-              <span className="text-xl font-bold text-green-300">$12/mo*</span>
+              <span className="text-xl font-bold text-green-300">$10/mo*</span>
             </div>
             <ul className="mt-6 flex flex-col gap-2 text-xs text-neutral-300">
               <li>
