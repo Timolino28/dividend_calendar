@@ -3,12 +3,20 @@ import React from "react";
 function CTA() {
   return (
     <div className="bg-green-400 py-20">
-      <div className="flex max-w-[960px] mx-auto py-10 px-8">
+      <div className="flex gap-10 max-w-[960px] mx-auto py-10 px-8">
         {/* Left Container */}
         <div>
-          <h1 className="text-neutral-800 font-medium text-4xl">
-            Ready to trade your 4-hour research rabbit holes for 4-second
-            insights?
+          <h1 className="text-neutral-800 font-light text-4xl">
+            Ready to trade your <br />
+            <span className="font-4xl font-bold text-neutral-700 opacity-50 blur-[2px]">
+              4-hour research
+            </span>{" "}
+            rabbit holes <br /> for
+            <span className="font-4xl font-bold text-neutral-100">
+              {" "}
+              4-second insights
+            </span>
+            ?
           </h1>
         </div>
 
