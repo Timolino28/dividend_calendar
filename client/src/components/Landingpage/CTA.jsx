@@ -114,7 +114,7 @@ function CTA() {
                 Join the waiting list
               </button>
               <p className="pt-3 text-xs text-neutral-400">
-                *price may increase after launch
+                *price will increase after launch
               </p>
             </div>
           </div>
