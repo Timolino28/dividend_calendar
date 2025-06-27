@@ -2,7 +2,7 @@ import React from "react";
 
 function CTA() {
   return (
-    <div className="bg-green-400 py-20">
+    <div className="bg-green-400 py-20" id="cta">
       <div className="flex gap-10 max-w-[960px] mx-auto py-10 px-8">
         {/* Left Container */}
         <div>

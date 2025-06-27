@@ -1,7 +1,6 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import DividendCalendar from "./pages/DividendCalendar";
@@ -16,7 +15,6 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <NavBar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/calendar" element={<DividendCalendar />} />

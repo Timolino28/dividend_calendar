@@ -2,7 +2,7 @@ import React from "react";
 
 function FAQ() {
   return (
-    <div className="bg-neutral-800 py-20">
+    <div className="bg-neutral-800 py-40" id="faq">
       <div className="max-w-6xl gap-10 flex justify-center mx-auto px-10 py-10">
         <div className="w-full">
           <h1 className="text-3xl font-semibold text-neutral-100 whitespace-nowrap">
