@@ -13,31 +13,68 @@ function FAQ() {
           <div className="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" defaultChecked />
             <div className="text-white collapse-title font-semibold">
-              How do I create an account?
+              What is the Zero Yield Club?
             </div>
             <div className="text-white collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the
-              registration process.
+              The Zero Yield Club was created to help private investors discover
+              new stock opportunities. Since we know how time-consuming and
+              tedious this can be, we built this tool to do the heavy lifting —
+              for you and for us.
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" defaultChecked />
+            <div className="text-white collapse-title font-semibold">
+              How often will the dividend calendar be updated?
+            </div>
+            <div className="text-white collapse-content text-sm">
+              The dividend calendar is updated daily to ensure you always have
+              the latest information.
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
             <div className="text-white collapse-title font-semibold">
-              I forgot my password. What should I do?
+              How is the valuation system build?
             </div>
             <div className="text-white collapse-content text-sm">
-              Click on "Forgot Password" on the login page and follow the
-              instructions sent to your email.
+              The valuation system is based on the four metrics DCF, P/E, P/B
+              and D/E. For each metric, we track whether it signals a stock is
+              "undervalued" or "overvalued". The DCF (Discounted Cash Flow)
+              metric counts twice as much as the others, meaning it has more
+              influence on the final result.
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
             <div className="text-white collapse-title font-semibold">
-              How do I update my profile information?
+              Can I cancel my subscription at any time?
             </div>
             <div className="text-white collapse-content text-sm">
-              Go to "My Account" settings and select "Edit Profile" to make
-              changes.
+              Yes, you can cancel your subscription at any time. It's a monthly
+              plan with no long-term commitment.
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div className="text-white collapse-title font-semibold">
+              I’m not sure yet – can I try the product for free?{" "}
+            </div>
+            <div className="text-white collapse-content text-sm">
+              Yes, you can try it free for seven days. If you cancel within the
+              trial period, you won’t be charged.
+            </div>
+          </div>
+          <div className="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div className="text-white collapse-title font-semibold">
+              Will there be more features in the future?
+            </div>
+            <div className="text-white collapse-content text-sm">
+              Yes, we’re actively working on new features. While we can’t share
+              everything yet, one upcoming highlight is an AI tool that helps
+              identify opportunities within specific industries and supply
+              chains.
             </div>
           </div>
         </div>
