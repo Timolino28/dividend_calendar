@@ -25,14 +25,14 @@ const painPoints = [
 
 function PainSection() {
   return (
-    <div className="bg-neutral-900 py-20">
-      <div className="max-w-5xl flex items-center mx-auto gap-25">
+    <div className="bg-neutral-100 py-10">
+      <div className="max-w-[1450px] bg-neutral-900 flex items-center mx-auto py-10 px-30 rounded-lg">
         <div className="px-8 py-10">
           <h1 className="text-4xl/10 font-semibold text-red-400 mb-2">
-            The stock hunt shouldn't break your brain.
+            The stock hunt shouldn't break <br /> your brain.
           </h1>
           <h2 className="text-2xl mb-8 font-light text-neutral-200">
-            But between gurus, graphs, and guesswork — it kinda does.
+            But between gurus, graphs, and guesswork — <br /> it kinda does.
           </h2>
           <div>
             <div className="flex flex-col gap-8 min-w-sm py-2 bg-neutral-900 ">
@@ -56,9 +56,9 @@ function PainSection() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center text-center mx-auto">
           <h2 className="text-4xl font-bold text-green-400">
-            Escape the chaos of clueless investing
+            Escape the chaos of <br /> clueless investing
           </h2>
 
           <div className="mt-6 animate-bounce">
