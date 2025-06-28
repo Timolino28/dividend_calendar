@@ -5,6 +5,7 @@ import PainSection from "../components/Landingpage/PainSection";
 import Features from "../components/Landingpage/Features";
 import CTA from "../components/Landingpage/CTA";
 import FAQ from "../components/Landingpage/FAQ";
+import Testimonial from "../components/Landingpage/Testimonial";
 
 function LandingPage() {
   return (
@@ -13,6 +14,7 @@ function LandingPage() {
       <Hero />
       <PainSection />
       <Features />
+      <Testimonial />
       <CTA />
       <FAQ />
     </>
