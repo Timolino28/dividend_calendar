@@ -21,7 +21,7 @@ const valuationFeatures = [
 
 function Features() {
   return (
-    <div className="bg-neutral-100 py-20" id="features">
+    <div className="bg-neutral-100 py-10" id="features">
       <div className="flex flex-col items-center max-w-5xl mx-auto pt-10 px-8">
         <div className="badge badge-soft bg-green-100 text-green-400 font-semibold border-green-400 mb-3">
           Our Solution

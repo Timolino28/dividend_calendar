@@ -31,7 +31,7 @@ function PainSection() {
           <h1 className="text-4xl/10 font-semibold text-red-400 mb-2">
             The stock hunt shouldn't break your brain.
           </h1>
-          <h2 className="text-2xl mb-8 font-medium text-neutral-200">
+          <h2 className="text-2xl mb-8 font-light text-neutral-200">
             But between gurus, graphs, and guesswork — it kinda does.
           </h2>
           <div>
@@ -60,9 +60,7 @@ function PainSection() {
           <h2 className="text-4xl font-bold text-green-400">
             Escape the chaos of clueless investing
           </h2>
-          <p className="text-xl text-neutral-300 mt-2">
-            Scroll down before you buy another stock based on your dad's advice.
-          </p>
+
           <div className="mt-6 animate-bounce">
             <HiChevronDoubleDown size={36} className="text-green-400" />
           </div>

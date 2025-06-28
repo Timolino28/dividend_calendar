@@ -23,7 +23,7 @@ function FAQ() {
             </div>
           </div>
           <div className="collapse collapse-arrow join-item border-base-300 border">
-            <input type="radio" name="my-accordion-4" defaultChecked />
+            <input type="radio" name="my-accordion-4" />
             <div className="text-white collapse-title font-semibold">
               How often will the dividend calendar be updated?
             </div>

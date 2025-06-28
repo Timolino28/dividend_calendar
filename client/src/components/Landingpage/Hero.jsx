@@ -34,10 +34,14 @@ function Hero() {
           ></script>
           <p className="text-neutral-200 text-xl py-4 mb-5">
             Track payout dates with our{" "}
-            <span className="font-semibold">Dividend Calendar</span> and
-            evaluate fair prices with our{" "}
-            <span className="font-semibold">Valuation Scoring System</span>.
-            Data-driven, not drama-driven.
+            <span className="font-semibold underline italic text-green-200">
+              Dividend Calendar
+            </span>{" "}
+            and evaluate fair prices with our{" "}
+            <span className="font-semibold underline italic text-green-200">
+              Valuation Scoring System
+            </span>
+            . Data-driven, not drama-driven.
           </p>
           <button className="btn text-neutral-800 bg-green-400 border border-green-400 text-[16px] py-6 px-8">
             Let's Start
