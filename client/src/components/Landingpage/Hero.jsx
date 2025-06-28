@@ -12,26 +12,7 @@ function Hero() {
               Easy Mode
             </span>
           </h1>
-          <div
-            class="tenor-gif-embed mx-auto my-10"
-            data-postid="14116367"
-            data-share-method="host"
-            data-aspect-ratio="1.36806"
-            data-width="50%"
-          >
-            <a href="https://tenor.com/view/monkey-with-money-happy-withmoney-swag-dollars-more-money-gif-14116367">
-              Monkey With Money Happy Withmoney GIF
-            </a>
-            from{" "}
-            <a href="https://tenor.com/search/monkey+with+money-gifs">
-              Monkey With Money GIFs
-            </a>
-          </div>{" "}
-          <script
-            type="text/javascript"
-            async
-            src="https://tenor.com/embed.js"
-          ></script>
+
           <p className="text-neutral-600 text-xl py-4 mb-5">
             Track payout dates with our{" "}
             <span className="font-semibold underline italic text-green-400">
