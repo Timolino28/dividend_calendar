@@ -7,7 +7,7 @@ function NavBar() {
   const isLanding = location.pathname === "/";
 
   return (
-    <div className="navbar sticky bg-neutral-900 border-b-[0.5px] border-green-400">
+    <div className="navbar sticky bg-neutral-900 border-b-[2px] border-green-400">
       <div className="navbar-start">
         <a className="text-xl font-semibold text-neutral-100 ml-5" href="/">
           Zero Yield Club 💸
