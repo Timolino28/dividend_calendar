@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import JoinWaitingList from "./JoinWaitingList";
 
 function CTA() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="bg-neutral-100 py-20" id="cta">
       <div className="bg-green-400 flex flex-col lg:flex-row justify-between items-center px-40 max-w-[1450px] mx-auto py-20 rounded-lg">
@@ -113,7 +116,10 @@ function CTA() {
                 <p className="text-lg text-green-300 font-bold pt-8 pb-3">
                   Launching soon:
                 </p>
-                <button className="btn bg-neutral-100 hover:bg-green-400 w-full">
+                <button
+                  className="btn bg-neutral-100 hover:bg-green-400 w-full"
+                  onClick={() => setShowModal(true)}
+                >
                   Join the waiting list
                 </button>
                 <p className="pt-3 text-xs text-neutral-400">
@@ -123,6 +129,7 @@ function CTA() {
             </div>
           </div>
         </div>
+        {showModal && <JoinWaitingList onClose={() => setShowModal(false)} />}
       </div>
     </div>
   );
