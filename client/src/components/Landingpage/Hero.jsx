@@ -29,8 +29,8 @@ function Hero() {
             </span>
             . Data-driven, not drama-driven.
           </p>
-          <div className="flex justify-between">
-            <div className="bg-neutral-800 border border-green-400 rounded-md py-5 px-7">
+          <div className="flex justify-between gap-4">
+            <div className="opacity-90 hover:opacity-100 transition-all duration-300 flex-1 bg-neutral-800 border border-green-400 rounded-md py-5 px-6">
               <div className="flex flex-col items-center">
                 <FaRegCheckCircle size={25} className="text-green-400" />
                 <p className="text-xl text-neutral-200 font-semibold my-2">
@@ -38,7 +38,7 @@ function Hero() {
                 </p>
               </div>
             </div>
-            <div className="bg-neutral-800 border border-green-400 rounded-md py-5 px-7">
+            <div className="opacity-90 hover:opacity-100 transition-all duration-300 flex-1 bg-neutral-800 border border-green-400 rounded-md py-5 px-6">
               <div className="flex flex-col items-center">
                 <FaRegCheckCircle size={25} className="text-green-400" />
                 <p className="text-xl text-neutral-200 font-semibold my-2">
@@ -46,7 +46,7 @@ function Hero() {
                 </p>
               </div>
             </div>
-            <div className="bg-neutral-800 border border-green-400 rounded-md py-5 px-7">
+            <div className="opacity-90 hover:opacity-100 transition-all duration-300 flex-1 bg-neutral-800 border border-green-400 rounded-md py-5 px-6">
               <div className="flex flex-col items-center">
                 <FaRegCheckCircle size={25} className="text-green-400" />
                 <p className="text-xl text-neutral-200 font-semibold my-2">
