@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBarLanding from "../components/Landingpage/NavBarLanding";
 import Hero from "../components/Landingpage/Hero";
 import PainSection from "../components/Landingpage/PainSection";
@@ -11,9 +11,17 @@ import SuccessBadge from "../components/SuccessBadge";
 function LandingPage() {
   const [showSuccess, setShowSuccess] = useState(false);
 
+  useEffect(() => {
+    if (showSuccess) {
+      const timer = setTimeout(() => setShowSuccess(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showSuccess]);
+
   return (
     <>
       {showSuccess && <SuccessBadge />}
+
       <NavBarLanding />
       <Hero />
       <PainSection />
