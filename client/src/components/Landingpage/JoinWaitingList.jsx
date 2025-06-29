@@ -74,7 +74,7 @@ function JoinWaitingList({ onClose, onSuccess }) {
               />
             </label>
             {nameError && (
-              <p className="text-xs text-red-400 mb-4">{nameError}</p>
+              <p className="text-xs text-red-300 mb-4">{nameError}</p>
             )}
 
             {/* Mail Input */}
@@ -102,22 +102,26 @@ function JoinWaitingList({ onClose, onSuccess }) {
                 onChange={(e) => setMailAddress(e.target.value)}
               />
             </label>
-            {emailError && <p className="text-xs text-red-400">{emailError}</p>}
+            {emailError && <p className="text-xs text-red-300">{emailError}</p>}
           </div>
           <div className="card-actions justify-end">
             <button
-              className="btn btn-sm bg-red-400 text-black mt-5 mr-1"
+              className="cursor-pointer border border-red-300 hover:border-red-400 py-2 px-3 rounded-md bg-transparent text-xs text-red-400 font-semibold mt-5 mr-1 transition-all duration-300 ease-in-out"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
-              className="btn btn-sm bg-green-400 text-black mt-5 mr-3"
+              className="cursor-pointer border border-green-300 hover:border-green-400 py-2 px-3 rounded-md bg-transparent text-xs text-green-400 font-semibold mt-5 mr-4 transition-all duration-300 ease-in-out"
               onClick={handleSubmit}
             >
               Submit
             </button>
           </div>
+          <p className="text-xs text-neutral-300 mt-5">
+            Your privacy is very important to us, that's why we will never share
+            your data with third parties!
+          </p>
         </div>
       </div>
     </div>

@@ -123,7 +123,7 @@ function CTA({ onSuccess }) {
                   Join the waiting list
                 </button>
                 <p className="pt-3 text-xs text-neutral-400">
-                  *price will increase after launch
+                  *Price will increase after launch
                 </p>
               </div>
             </div>
