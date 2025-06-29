@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function JoinWaitingList({ onClose }) {
+function JoinWaitingList({ onClose, onSuccess }) {
   const [firstName, setFirstName] = useState("");
   const [mailAddress, setMailAddress] = useState("");
   const [nameError, setNameError] = useState("");
@@ -33,9 +33,8 @@ function JoinWaitingList({ onClose }) {
     if (hasError) return;
 
     setIsSuccess(true);
+    onSuccess();
     onClose();
-
-    console.log(mailAddress, firstName);
   };
 
   return (

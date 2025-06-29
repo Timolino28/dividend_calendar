@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import JoinWaitingList from "./JoinWaitingList";
 
-function CTA() {
+function CTA({ onSuccess }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -129,7 +129,12 @@ function CTA() {
             </div>
           </div>
         </div>
-        {showModal && <JoinWaitingList onClose={() => setShowModal(false)} />}
+        {showModal && (
+          <JoinWaitingList
+            onClose={() => setShowModal(false)}
+            onSuccess={onSuccess}
+          />
+        )}
       </div>
     </div>
   );
