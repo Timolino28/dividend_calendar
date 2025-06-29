@@ -8,8 +8,8 @@
   position: absolute;
   top: 50%;
   left: -10%;
-  width: 120%;
-  height: 1.5em;
+  width: 112%;
+  height: 1.2em;
   background-color: #05df72;
   transform: skew(-12deg) translateY(-50%);
   z-index: -1;
