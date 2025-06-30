@@ -6,7 +6,7 @@ function Hero({ onSuccess }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="bg-neutral-100 min-h-180">
+    <div className="bg-neutral-100 h-[100vh]">
       {/* Hero-Inhalte */}
       <div className="flex flex-col justify-center items-center min-h-[720px] text-center">
         <div className="max-w-3xl h-1/2">

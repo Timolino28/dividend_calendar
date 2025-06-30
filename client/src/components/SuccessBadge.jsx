@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function SuccessBadge() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true); // Slide in
+
+    const timeout = setTimeout(() => {
+      setVisible(false); // Slide out
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div
       role="alert"
-      className="fixed top-4 left-1/2 -translate-x-1/2 alert alert-success z-50 shadow-lg"
+      className={`fixed left-1/2 -translate-x-1/2 z-50 alert bg-neutral-100 border border-neutral-900 text-neutral-900 shadow-lg transition-all duration-500 ease-in-out
+        ${visible ? "top-6 opacity-100" : "-top-20 opacity-0"}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +32,7 @@ function SuccessBadge() {
           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span>You successfully joind our waiting list!</span>
+      <span>You successfully joined our waiting list!</span>
     </div>
   );
 }

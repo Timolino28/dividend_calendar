@@ -25,7 +25,7 @@ const painPoints = [
 
 function PainSection() {
   return (
-    <div className="bg-neutral-100 py-10">
+    <div className="bg-neutral-100 pb-10">
       <div className="max-w-[1450px] bg-neutral-900 flex items-center mx-auto py-10 px-30 rounded-lg">
         <div className="px-8 py-10">
           <h1 className="text-4xl/10 font-semibold text-red-400 mb-2">
