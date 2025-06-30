@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function JoinWaitingList({ onClose, onSuccess }) {
+function JoinWaitingList({ onClose, onSuccess, variant }) {
   const [firstName, setFirstName] = useState("");
   const [mailAddress, setMailAddress] = useState("");
   const [nameError, setNameError] = useState("");
@@ -36,6 +36,8 @@ function JoinWaitingList({ onClose, onSuccess }) {
     onSuccess();
     onClose();
   };
+
+  const containerClass = variant === "hero" ? "px-2" : "";
 
   return (
     <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center">
@@ -74,7 +76,11 @@ function JoinWaitingList({ onClose, onSuccess }) {
               />
             </label>
             {nameError && (
-              <p className="text-xs text-red-300 mb-4 text-left">{nameError}</p>
+              <p
+                className={`text-xs text-red-300 mb-4 text-left ${containerClass}`}
+              >
+                {nameError}
+              </p>
             )}
 
             {/* Mail Input */}
@@ -103,7 +109,11 @@ function JoinWaitingList({ onClose, onSuccess }) {
               />
             </label>
             {emailError && (
-              <p className="text-xs text-red-300 text-left">{emailError}</p>
+              <p
+                className={`text-xs text-red-300 mb-4 text-left ${containerClass}`}
+              >
+                {emailError}
+              </p>
             )}
           </div>
           <div className="card-actions justify-end">

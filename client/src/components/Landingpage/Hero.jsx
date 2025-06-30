@@ -66,6 +66,7 @@ function Hero({ onSuccess }) {
           <JoinWaitingList
             onClose={() => setShowModal(false)}
             onSuccess={onSuccess}
+            variant="hero"
           />
         )}
       </div>
