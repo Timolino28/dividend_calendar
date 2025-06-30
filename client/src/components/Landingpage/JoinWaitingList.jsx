@@ -74,7 +74,7 @@ function JoinWaitingList({ onClose, onSuccess }) {
               />
             </label>
             {nameError && (
-              <p className="text-xs text-red-300 mb-4">{nameError}</p>
+              <p className="text-xs text-red-300 mb-4 text-left">{nameError}</p>
             )}
 
             {/* Mail Input */}
@@ -102,7 +102,9 @@ function JoinWaitingList({ onClose, onSuccess }) {
                 onChange={(e) => setMailAddress(e.target.value)}
               />
             </label>
-            {emailError && <p className="text-xs text-red-300">{emailError}</p>}
+            {emailError && (
+              <p className="text-xs text-red-300 text-left">{emailError}</p>
+            )}
           </div>
           <div className="card-actions justify-end">
             <button

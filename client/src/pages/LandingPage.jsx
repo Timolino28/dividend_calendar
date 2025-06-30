@@ -23,7 +23,7 @@ function LandingPage() {
       {showSuccess && <SuccessBadge />}
 
       <NavBarLanding />
-      <Hero />
+      <Hero onSuccess={() => setShowSuccess(true)} />
       <PainSection />
       <Features />
       <Testimonial />
