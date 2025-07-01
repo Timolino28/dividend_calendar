@@ -35,27 +35,29 @@ function Hero({ onSuccess }) {
             </span>
             . Data-driven, not drama-driven.
           </p>
-          <div className="flex justify-between gap-4 mt-5">
-            <div className="opacity-95 hover:opacity-100 transition-all duration-300 flex-1 bg-neutral-800 border border-green-400 rounded-md py-5 px-6">
+          <div className="flex gap-4 mt-5">
+            <div className="transition-all duration-300 flex-1 bg-neutral-200 border border-neutral-300 rounded-md py-2 px-4">
               <div className="flex flex-col items-center">
-                <FaRegCheckCircle size={25} className="text-green-400" />
-                <p className="text-xl text-neutral-200 font-semibold my-2">
+                <span className="text-4xl">💸</span>
+                <p className="text-xl text-neutral-800 font-semibold my-2">
                   Always current data
                 </p>
               </div>
             </div>
-            <div className="opacity-95 hover:opacity-100 transition-all duration-300 flex-1 bg-neutral-800 border border-green-400 rounded-md py-5 px-6">
+
+            <div className="transition-all duration-300 flex-1 bg-neutral-200 border border-neutral-300 rounded-md py-2 px-4">
               <div className="flex flex-col items-center">
-                <FaRegCheckCircle size={25} className="text-green-400" />
-                <p className="text-xl text-neutral-200 font-semibold my-2">
+                <span className="text-4xl">🚀</span>
+                <p className="text-xl text-neutral-800 font-semibold my-2">
                   7 day trial period
                 </p>
               </div>
             </div>
-            <div className="opacity-95 hover:opacity-100 transition-all duration-300 flex-1 bg-neutral-800 border border-green-400 rounded-md py-5 px-6">
+
+            <div className="transition-all duration-300 flex-1 bg-neutral-200 border border-neutral-300 rounded-md py-2 px-4">
               <div className="flex flex-col items-center">
-                <FaRegCheckCircle size={25} className="text-green-400" />
-                <p className="text-xl text-neutral-200 font-semibold my-2">
+                <span className="text-4xl">😍</span>
+                <p className="text-xl text-neutral-800 font-semibold my-2">
                   Cancel anytime
                 </p>
               </div>
