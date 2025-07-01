@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import DividendCalendar from "./pages/DividendCalendar";
 import ValuationCheckPage from "./pages/ValuationCheckPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/calendar" element={<DividendCalendar />} />
           <Route path="/valuation-check" element={<ValuationCheckPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
         </Routes>
         {isLandingPage && <Footer />}
       </QueryClientProvider>

@@ -20,10 +20,10 @@ function Footer() {
           your own risk.
         </p>
         <nav className="flex gap-4">
-          <a className="text-base text-green-400" href="#">
+          <a className="text-base text-green-400" href="/terms-of-use">
             Terms of use
           </a>
-          <a className="text-base text-green-400" href="#">
+          <a className="text-base text-green-400" href="/privacy-policy">
             Privacy Policy
           </a>
         </nav>
