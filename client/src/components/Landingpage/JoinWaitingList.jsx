@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { joinWaitingList } from "../../lib/joinWaitingList";
 
 function JoinWaitingList({ onClose, onSuccess, variant }) {
   const [firstName, setFirstName] = useState("");
   const [mailAddress, setMailAddress] = useState("");
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let hasError = false;
@@ -32,9 +32,14 @@ function JoinWaitingList({ onClose, onSuccess, variant }) {
 
     if (hasError) return;
 
-    setIsSuccess(true);
-    onSuccess();
-    onClose();
+    try {
+      await joinWaitingList(firstName, mailAddress);
+      onSuccess();
+      onClose();
+    } catch (error) {
+      console.error("Supabase error:", error.message);
+      setEmailError("Something went wrong. Please try again.");
+    }
   };
 
   const containerClass = variant === "hero" ? "px-2" : "";
