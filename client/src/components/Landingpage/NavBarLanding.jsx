@@ -7,16 +7,16 @@ function NavBar() {
   const isLanding = location.pathname === "/";
 
   return (
-    <div className="navbar bg-neutral-900 border-b-[2px] border-green-400">
+    <div className="navbar flex-col md:flex-row bg-neutral-900 border-b-[2px] border-green-400">
       <div className="navbar-start">
-        <a className="text-xl font-semibold text-neutral-100 ml-5" href="/">
+        <a className="md:text-xl font-semibold text-neutral-100 ml-5" href="/">
           <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
             Zero Yield Club
           </span>
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-10">
+      <div className="navbar-center flex">
+        <ul className="menu menu-horizontal px-1 md:gap-10">
           <li className="text-base font-semibold text-neutral-100">
             <Link
               to="features"
@@ -40,34 +40,7 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end mr-5">
-        <label className="text-neutral-100 lg:hidden swap swap-rotate">
-          {/* this hidden checkbox controls the state */}
-          <input type="checkbox" />
-
-          {/* hamburger icon */}
-          <svg
-            className="swap-off fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
-          >
-            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-          </svg>
-
-          {/* close icon */}
-          <svg
-            className="swap-on fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
-          >
-            <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-          </svg>
-        </label>
-      </div>
+      <div className="navbar-end mr-5"></div>
     </div>
   );
 }

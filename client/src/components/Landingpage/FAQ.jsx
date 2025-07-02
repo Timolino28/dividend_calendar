@@ -3,13 +3,13 @@ import React from "react";
 function FAQ() {
   return (
     <div className="bg-neutral-100 py-10" id="faq">
-      <div className="max-w-6xl gap-10 flex justify-center mx-auto px-10 py-10">
+      <div className="max-w-6xl gap-10 flex md:flex-row flex-col justify-center mx-auto px-10 py-10">
         <div className="w-full">
-          <h1 className="text-3xl font-semibold text-neutral-900 whitespace-nowrap">
+          <h1 className="md:text-3xl text-2xl font-semibold text-neutral-900 whitespace-nowrap">
             Frequently asked questions
           </h1>
         </div>
-        <div className="flex mx-auto join join-vertical bg-neutral-100 px-10">
+        <div className="flex mx-auto join join-vertical bg-neutral-100 md:px-10">
           <div className="collapse collapse-arrow join-item bg-neutral-100 border-neutral-900 border">
             <input type="radio" name="my-accordion-4" defaultChecked />
             <div className="text-neutral-900 collapse-title font-semibold">

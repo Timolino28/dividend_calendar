@@ -6,7 +6,7 @@ function CTA({ onSuccess }) {
 
   return (
     <div className="bg-neutral-100 py-20" id="cta">
-      <div className="bg-green-400 flex flex-col lg:flex-row justify-between items-center px-40 max-w-[1450px] mx-auto py-20 rounded-lg">
+      <div className="bg-green-400 flex flex-col md:flex-row justify-between items-center md:px-40 max-w-[1450px] mx-auto py-20 rounded-lg">
         {/* Left Container */}
         <div className="text-center lg:text-left">
           <h1 className="text-neutral-800 font-base text-5xl/14">
@@ -24,8 +24,8 @@ function CTA({ onSuccess }) {
         </div>
 
         {/* Pricing Card */}
-        <div className="mx-auto">
-          <div className="card min-w-96 bg-neutral-800 shadow-sm">
+        <div className="md:mx-auto">
+          <div className="card md:min-w-96 bg-neutral-800 shadow-sm">
             <div className="card-body">
               <span className="badge badge-xs badge-soft badge-success">
                 Early Access

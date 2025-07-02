@@ -19,7 +19,7 @@ function Footer() {
           financial or investment advice. All investment decisions are made at
           your own risk.
         </p>
-        <nav className="flex gap-4">
+        <nav className="flex gap-4 mt-5 md:mt-0">
           <a className="text-base text-green-400" href="/terms-of-use">
             Terms of use
           </a>
