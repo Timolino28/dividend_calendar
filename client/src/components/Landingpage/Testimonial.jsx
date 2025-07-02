@@ -5,10 +5,8 @@ function Testimonial() {
   return (
     <div className="bg-neutral-100 py-10">
       <div className="flex flex-col items-center max-w-5xl mx-auto pt-10 px-8">
-        <div className="badge badge-soft mb-3">Testimonials</div>
-        <h1 className="text-4xl font-semibold">Don't take our word for it</h1>
         {/*Rating*/}
-        <div className="flex mt-2 text-green-400 text-2xl">
+        <div className="flex mb-5 text-green-400 text-2xl">
           <FaStar />
           <FaStar />
           <FaStar />
@@ -17,11 +15,21 @@ function Testimonial() {
         </div>
       </div>
 
-      <div className="max-w-[1450px] flex justify-center gap-10">
+      <div className="max-w-[1450px] flex flex-col justify-center gap-10 mx-auto">
+        <div className="flex items-center justify-center text-center px-6">
+          <h1 className="text-5xl font-bold text-neutral-800 leading-snug">
+            Do it like Julius and let the <br />
+            <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
+              Zero Yield Club
+            </span>{" "}
+            <br /> do the heavy lifting for you
+          </h1>
+        </div>
+
         <div className="flex justify-center items-center">
           <div>
             <div
-              className="tenor-gif-embed"
+              className="tenor-gif-embed mx-auto"
               data-postid="14116367"
               data-share-method="host"
               data-aspect-ratio="1.36806"
@@ -41,14 +49,6 @@ function Testimonial() {
               src="https://tenor.com/embed.js"
             ></script>
           </div>
-        </div>
-
-        <div className="flex items-center px-6">
-          <h1 className="text-3xl font-bold text-neutral-800 leading-snug">
-            Do it like Julius and let the <br />
-            <span className="text-green-400">Zero Yield Club</span> do the heavy
-            lifting for you
-          </h1>
         </div>
       </div>
     </div>

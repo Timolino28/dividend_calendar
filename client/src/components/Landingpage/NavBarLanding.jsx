@@ -10,7 +10,9 @@ function NavBar() {
     <div className="navbar bg-neutral-900 border-b-[2px] border-green-400">
       <div className="navbar-start">
         <a className="text-xl font-semibold text-neutral-100 ml-5" href="/">
-          Zero Yield Club 💸
+          <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
+            Zero Yield Club
+          </span>
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

@@ -27,8 +27,10 @@ function Features() {
           Our Solution
         </div>
         <h1 className="text-5xl font-bold text-neutral-800 text-center">
-          Welcome to the{" "}
-          <span className="text-green-400">Zero Yield Club!</span>
+          Welcome to the <br />
+          <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
+            Zero Yield Club
+          </span>
         </h1>
         <p className="text-neutral-600 text-2xl text-center mt-3 mb-10">
           Two features. Zero fluff.{" "}

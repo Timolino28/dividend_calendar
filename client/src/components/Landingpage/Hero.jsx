@@ -17,10 +17,10 @@ function Hero({ onSuccess }) {
             Join the waiting list now!
           </div>
           <h1 className="text-7xl text-neutral-800 font-bold font-roboto">
-            New stock opportunites
+            New stock opportunites in
             <br />
             <span className="mt-6 uppercase italic tracking-wide leading-[1.5] text-7xl text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
-              In Minutes
+              Seconds
             </span>
           </h1>
 
