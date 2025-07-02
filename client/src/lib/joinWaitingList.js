@@ -4,8 +4,7 @@ import { supabase } from "./supabase";
 const joinWaitingList = async (firstName, mailAddress) => {
   const { error } = await supabase
     .from("waiting_list")
-    .insert([{ first_name: firstName, mail: mailAddress }])
-    .select();
+    .insert([{ first_name: firstName, mail: mailAddress }]);
 
   if (error) {
     console.error("Unable to insert data: ", error.message);
