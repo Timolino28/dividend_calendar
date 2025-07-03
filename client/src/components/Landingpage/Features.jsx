@@ -21,18 +21,18 @@ const valuationFeatures = [
 
 function Features() {
   return (
-    <div className="bg-neutral-100 py-10" id="features">
+    <div className="bg-neutral-100 md:py-10" id="features">
       <div className="flex flex-col items-center max-w-5xl mx-auto pt-10 px-8">
         <div className="badge badge-soft bg-green-100 text-green-400 font-semibold border-green-400 mb-3">
           Our Solution
         </div>
-        <h1 className="text-5xl font-bold text-neutral-800 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold text-neutral-800 text-center">
           Welcome to the <br />
           <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
             Zero Yield Club
           </span>
         </h1>
-        <p className="text-neutral-600 text-2xl text-center mt-3 mb-10">
+        <p className="text-neutral-600 md:text-2xl text-[18px] text-center mt-3 mb-10">
           Two features. Zero fluff.{" "}
         </p>
       </div>

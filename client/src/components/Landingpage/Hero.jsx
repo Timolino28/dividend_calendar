@@ -8,15 +8,15 @@ function Hero({ onSuccess }) {
   return (
     <div className="bg-neutral-100 h-[100vh]">
       {/* Hero-Inhalte */}
-      <div className="flex flex-col justify-center items-center min-h-[720px] text-center">
+      <div className="flex flex-col justify-center items-center min-h-[720px] text-center pt-7 md:pt-0">
         <div className="max-w-3xl h-1/2">
           <div
-            className="cursor-pointer badge badge-soft bg-neutral-200 border border-neutral-400 mb-3 font-semibold"
+            className="cursor-pointer badge badge-soft bg-neutral-200 border border-neutral-400 md:mb-3 mb-6 font-semibold"
             onClick={() => setShowModal(true)}
           >
             Join the waiting list now!
           </div>
-          <h1 className="md:text-7xl text-4xl text-neutral-800 font-bold font-roboto">
+          <h1 className="md:text-7xl text-5xl text-neutral-800 font-bold font-roboto">
             New stock opportunites in
             <br />
             <span className="md:mt-6 uppercase italic tracking-wide leading-[1.5] md:text-7xl text-4xl text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
@@ -24,7 +24,7 @@ function Hero({ onSuccess }) {
             </span>
           </h1>
 
-          <p className="text-neutral-600 md:text-2xl text-xl py-10">
+          <p className="text-neutral-600 md:text-2xl text-[18px] py-10 px-5">
             Track payout dates with our{" "}
             <span className="font-semibold italic text-green-400">
               Dividend Calendar

@@ -25,23 +25,27 @@ const painPoints = [
 
 function PainSection() {
   return (
-    <div className="bg-neutral-100 pb-10">
-      <div className="max-w-[1450px] bg-neutral-900 md:flex-row flex flex-col items-center mx-auto py-10 md:px-30 rounded-lg">
-        <div className="px-8 py-10">
-          <h1 className="md:text-4xl/10 text-xl font-semibold text-red-400 mb-2">
-            The stock hunt shouldn't break <br /> your brain.
+    <div className="bg-neutral-100 pb-10 pt-32 md:pt-0">
+      <div className="w-full max-w-[1450px] mx-auto bg-neutral-900 flex flex-col md:flex-row items-center py-10 px-4 md:px-10 rounded-lg">
+        {" "}
+        <div className="w-full max-w-[425px] mx-auto py-10 px-5 md:px-0">
+          <h1 className="md:text-4xl/10 text-3xl font-semibold text-red-400 md:mb-5 mb-2">
+            The stock hunt shouldn't break your brain.
           </h1>
-          <h2 className="md:text-2xl text-[16px] mb-8 font-light text-neutral-200">
+          <h2 className="md:text-2xl text-[18px] mb-8 font-light text-neutral-200">
             But between gurus, graphs, and guesswork — <br /> it kinda does.
           </h2>
+
           <div>
             <div className="flex flex-col gap-8 py-2 bg-neutral-900">
               {painPoints.map((points) => (
-                <div className="card bg-neutral-800 w-full max-w-[350px] mx-auto text-neutral-content border border-neutral-500">
+                <div className="card bg-neutral-800 w-full max-w-[425px] mx-auto text-neutral-content border border-neutral-500">
                   {" "}
                   <div className="card-body">
                     <div className="flex md:flex-row flex-col">
-                      <div className="mr-4 text-neutral-300">{points.icon}</div>
+                      <div className="mr-4 mb-2 md:mb-0 text-neutral-300">
+                        {points.icon}
+                      </div>
                       <div>
                         <h2 className="card-title md:text-xl text-red-400 mb-2">
                           {points.headline}
@@ -57,7 +61,7 @@ function PainSection() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center text-center mx-auto">
+        <div className="flex flex-col items-center justify-center text-center mx-auto mt-5 md:mt-0">
           <h2 className="md:text-4xl text-2xl font-bold text-green-400">
             Escape the chaos of <br /> clueless investing
           </h2>

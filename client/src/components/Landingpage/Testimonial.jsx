@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 
 function Testimonial() {
   return (
-    <div className="bg-neutral-100 py-10">
+    <div className="bg-neutral-100 md:py-10">
       <div className="flex flex-col items-center max-w-5xl mx-auto pt-10 px-8">
         {/*Rating*/}
         <div className="flex mb-5 text-green-400 text-2xl">
@@ -17,7 +17,7 @@ function Testimonial() {
 
       <div className="max-w-[1450px] flex flex-col justify-center gap-10 mx-auto">
         <div className="flex items-center justify-center text-center px-6">
-          <h1 className="text-5xl font-bold text-neutral-800 leading-snug">
+          <h1 className="md:text-5xl text-2xl font-bold text-neutral-800 leading-snug">
             Do it like Julius and let the <br />
             <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
               Zero Yield Club
