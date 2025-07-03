@@ -46,7 +46,7 @@ function JoinWaitingList({ onClose, onSuccess, variant }) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center">
-      <div className="card bg-neutral-800 text-white w-96 shadow-lg border border-green-400">
+      <div className="card bg-neutral-800 text-white md:w-96 w-75 shadow-lg border border-green-400">
         <div className="card-body">
           <h2 className="card-title mb-5">Join the Waiting List</h2>
           {/* Input fields */}

@@ -16,7 +16,7 @@ function SuccessBadge() {
   return (
     <div
       role="alert"
-      className={`fixed left-1/2 -translate-x-1/2 z-50 alert bg-neutral-100 border border-neutral-900 text-neutral-900 shadow-lg transition-all duration-500 ease-in-out
+      className={`w-70 md:w-90 fixed left-1/2 -translate-x-1/2 z-50 alert bg-neutral-100 border border-neutral-900 text-neutral-900 shadow-lg transition-all duration-500 ease-in-out
         ${visible ? "top-6 opacity-100" : "-top-20 opacity-0"}`}
     >
       <svg
