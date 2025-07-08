@@ -13,9 +13,12 @@ function NavBar() {
           : "navbar min-h-25 bg-neutral-900 border-b-2 border-green-400"
       }
     >
-      <div className="navbar-start">
-        <a className="text-xl font-semibold text-neutral-100 ml-5" href="/">
-          Zero Yield Club 💸
+      <div className="navbar-start pl-5">
+        <a
+          className="text-xl uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight"
+          href="/"
+        >
+          Zero Yield Club
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

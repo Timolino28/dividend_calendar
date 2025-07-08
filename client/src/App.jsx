@@ -7,16 +7,21 @@ import DividendCalendar from "./pages/DividendCalendar";
 import ValuationCheckPage from "./pages/ValuationCheckPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import NavBarLogin from "./components/NavBarLogin";
 
 const queryClient = new QueryClient();
 
 function App() {
   const location = useLocation();
   const isLandingPage = location.pathname === "/";
+  const showLoginNav =
+    location.pathname === "/calendar" ||
+    location.pathname === "/valuation-check";
 
   return (
     <>
       <QueryClientProvider client={queryClient}>
+        {showLoginNav && <NavBarLogin />}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/calendar" element={<DividendCalendar />} />

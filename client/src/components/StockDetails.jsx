@@ -30,14 +30,16 @@ function StockDetails({
       onClick={handleClick}
       className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center"
     >
-      <div className="card w-2xl bg-base-100 card-md shadow-sm border border-green-400">
+      <div className="card w-2xl max-h-screen min-h-[500px] overflow-y-auto bg-base-100 card-md shadow-sm border border-green-400">
         <div className="card-body">
           {isLoading && (
-            <span className="loading loading-ring loading-xl"></span>
+            <span className="loading loading-ring loading-xl mx-auto"></span>
           )}
 
           {isError && (
-            <p className="text-center text-red-500">Fehler beim Laden.</p>
+            <p className="flex justify-center items-center text-xl font-semibold text-center text-red-400">
+              Fehler beim Laden.
+            </p>
           )}
 
           {!isLoading && !isError && stock && (

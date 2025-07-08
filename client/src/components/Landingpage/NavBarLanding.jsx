@@ -7,7 +7,7 @@ function NavBar() {
   const isLanding = location.pathname === "/";
 
   return (
-    <div className="navbar flex-col md:flex-row bg-neutral-900 border-b-[2px] border-green-400">
+    <div className="navbar flex-col md:flex-row px-5 bg-neutral-900 border-b-[2px] border-green-400">
       <div className="navbar-start">
         <a className="md:text-xl font-semibold text-neutral-100 ml-5" href="/">
           <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
@@ -40,7 +40,14 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end mr-5"></div>
+      <div className="navbar-end mr-5">
+        <a href="/calendar">
+          {" "}
+          <button className="btn bg-neutral-100 hover:bg-green-400">
+            Get Started
+          </button>
+        </a>
+      </div>
     </div>
   );
 }
