@@ -41,12 +41,12 @@ function NavBar() {
         </ul>
       </div>
       <div className="navbar-end mr-5">
-        <a href="/calendar">
+        {/*  <a href="/calendar">
           {" "}
           <button className="btn bg-neutral-100 hover:bg-green-400">
             Get Started
           </button>
-        </a>
+        </a> */}
       </div>
     </div>
   );
