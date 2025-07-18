@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import dividendImage from "../../assets/dividend_calendar.png";
 import valuationImage from "../../assets/valuation_check.png";
+import dividendVideo from "../../assets/dividend_calendar_video.mov";
+import valuationVideo from "../../assets/valuation_check_video.mov";
 
 const features = [
   {
@@ -8,13 +10,13 @@ const features = [
     title: "Dividend Calendar",
     description:
       "Track upcoming dividends for your favorite stocks in one place.",
-    image: dividendImage,
+    video: dividendVideo,
   },
   {
     id: 2,
     title: "Valuation Check",
     description: "Instantly analyze a stock's valuation with key metrics.",
-    image: valuationImage,
+    video: valuationVideo,
   },
 ];
 
@@ -45,10 +47,14 @@ function FeatureTabs() {
 
       {/* Right side - Image */}
       <div className="w-full bg-white rounded-lg sticky top-24 h-fit">
-        <div className="rounded-lg p-4 md:p-10 mx-0 overflow-hidden shadow-lg border border-green-200">
+        <div className="rounded-lg mx-0 overflow-hidden shadow-lg border border-green-200">
           {" "}
-          <img
-            src={selectedFeature.image}
+          <video
+            src={selectedFeature.video}
+            autoPlay
+            loop
+            muted
+            playsInline
             alt={selectedFeature.title}
             className="w-full h-auto object-cover"
           />
