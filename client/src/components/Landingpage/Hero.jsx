@@ -59,7 +59,7 @@ function Hero({ onSuccess }) {
             <div className="transition-all duration-300 flex-1 bg-neutral-200 border border-neutral-300 rounded-md py-2 px-4 w-full max-w-[300px] mx-auto">
               {" "}
               <div className="flex flex-col items-center">
-                <span className="md:text-4xl text-3xl">😍</span>
+                <span className="md:text-4xl text-3xl">🤝</span>
                 <p className="text-xl text-neutral-800 font-semibold my-2">
                   Cancel anytime
                 </p>

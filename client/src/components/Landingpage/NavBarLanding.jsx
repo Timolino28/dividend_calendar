@@ -9,7 +9,10 @@ function NavBar() {
   return (
     <div className="navbar flex-col md:flex-row px-5 bg-neutral-900 border-b-[2px] border-green-400">
       <div className="navbar-start">
-        <a className="md:text-xl font-semibold text-neutral-100 ml-5" href="/">
+        <a
+          className="md:text-xl text-sm font-semibold text-neutral-100 ml-5"
+          href="/"
+        >
           <span className="uppercase italic tracking-wide leading-[1.5] text-neutral-800 font-black relative z-10 inline-block fancy-highlight">
             Zero Yield Club
           </span>
